@@ -1,16 +1,12 @@
-export default {
-  darkMode: 'class',
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   content: [
-    './src/**/*.{js,ts,jsx,tsx}',
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        primary: '#8b5cf6', // Violet
-        background: '#0f0f0f',
-        surface: '#1f1f1f',
-      },
-    },
+    extend: {},
   },
   plugins: [],
 }
