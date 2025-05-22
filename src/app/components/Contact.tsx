@@ -16,7 +16,7 @@ export default function Contact() {
     setStatus("Sending...");
 
     try {
-      const res = await fetch("https://formspree.io/f/your-form-id", {
+      const res = await fetch("https://formspree.io/f/mqaqoqaj", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
@@ -34,53 +34,90 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="min-h-screen flex flex-col items-center justify-center px-4 py-16 bg-white text-gray-900 dark:bg-black dark:text-white">
-      <div className="max-w-xl w-full">
-        <h2 className="text-4xl font-bold mb-6 border-b pb-2 border-gray-300 dark:border-gray-700">Contact Me</h2>
+    <section
+      id="contact"
+      className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-[#121212] text-white"
+    >
+      <div className="w-full max-w-2xl">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
+            Contact Me
+          </span>
+        </h2>
 
-        <form onSubmit={handleSubmit} className="space-y-4">
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="space-y-5 bg-[#1f1f1f] p-8 rounded-xl shadow-md">
           <input
             type="text"
             name="name"
-            value={formData.name}
-            onChange={handleChange}
             placeholder="Your Name"
             required
-            className="w-full p-2 rounded bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700"
+            value={formData.name}
+            onChange={handleChange}
+            className="w-full p-3 rounded bg-[#2a2a2a] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <input
             type="email"
             name="email"
-            value={formData.email}
-            onChange={handleChange}
             placeholder="Your Email"
             required
-            className="w-full p-2 rounded bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700"
+            value={formData.email}
+            onChange={handleChange}
+            className="w-full p-3 rounded bg-[#2a2a2a] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <textarea
             name="message"
-            value={formData.message}
-            onChange={handleChange}
             placeholder="Your Message"
             required
+            value={formData.message}
+            onChange={handleChange}
             rows={5}
-            className="w-full p-2 rounded bg-gray-100 dark:bg-gray-800 border border-gray-300 dark:border-gray-700"
+            className="w-full p-3 rounded bg-[#2a2a2a] border border-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
           ></textarea>
-          <button type="submit" className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+          <button
+            type="submit"
+            className="w-full bg-blue-600 hover:bg-blue-700 transition py-3 rounded-lg font-medium"
+          >
             Send Message
           </button>
+          {status && <p className="text-center text-sm mt-2">{status}</p>}
         </form>
 
-        {status && <p className="mt-4 text-sm text-center">{status}</p>}
-
-        <div className="mt-8 text-sm text-center">
-          <p>Email: <a href="mailto:briankesim@gmail.com" className="text-blue-600 dark:text-blue-400">briankesim@gmail.com</a></p>
-          <p>Phone: <a href="tel:+254795439412" className="text-blue-600 dark:text-blue-400">0795 439 412</a></p>
+        {/* Contact Info */}
+        <div className="mt-10 text-sm text-center space-y-2 text-gray-400">
           <p>
-            GitHub: <a href="https://github.com/KesiBrian" className="text-blue-600 dark:text-blue-400" target="_blank">KesiBrian</a>
+            Email:{" "}
+            <a href="mailto:briankesim@gmail.com" className="text-blue-500 hover:underline">
+              briankesim@gmail.com
+            </a>
           </p>
           <p>
-            LinkedIn: <a href="https://linkedin.com/in/brian-kesi-a82868324" className="text-blue-600 dark:text-blue-400" target="_blank">Brian Kesi</a>
+            Phone:{" "}
+            <a href="tel:+254795439412" className="text-blue-500 hover:underline">
+              0795 439 412
+            </a>
+          </p>
+          <p>
+            GitHub:{" "}
+            <a
+              href="https://github.com/KesiBrian"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              KesiBrian
+            </a>
+          </p>
+          <p>
+            LinkedIn:{" "}
+            <a
+              href="https://linkedin.com/in/brian-kesi-a82868324"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-500 hover:underline"
+            >
+              Brian Kesi
+            </a>
           </p>
         </div>
       </div>
