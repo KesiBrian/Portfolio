@@ -98,17 +98,6 @@ export default function Contact() {
             </a>
           </p>
           <p>
-            GitHub:{" "}
-            <a
-              href="https://github.com/KesiBrian"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              KesiBrian
-            </a>
-          </p>
-          <p>
             LinkedIn:{" "}
             <a
               href="https://linkedin.com/in/brian-kesi-a82868324"

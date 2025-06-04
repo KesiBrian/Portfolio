@@ -45,21 +45,32 @@ export default function About() {
       </div>
 
       {/* Tech Stack Icons */}
-      <div className="mt-12 w-full max-w-4xl">
-        <h3 className="text-2xl md:text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
+      <div className="mt-16 w-full max-w-4xl">
+        <h3 className="text-2xl md:text-3xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-500">
           Tech Stack
         </h3>
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-6 gap-6 justify-items-center text-4xl text-gray-400">
-          <SiReact title="React" className="hover:text-cyan-400 transition" />
-          <SiNextdotjs title="Next.js" className="hover:text-white transition" />
-          <SiTailwindcss title="Tailwind CSS" className="hover:text-sky-400 transition" />
-          <SiPython title="Python" className="hover:text-yellow-300 transition" />
-          <SiFlask title="Flask" className="hover:text-gray-300 transition" />
-          <SiPostgresql title="PostgreSQL" className="hover:text-blue-400 transition" />
-          <SiJavascript title="JavaScript" className="hover:text-yellow-400 transition" />
-          <SiHtml5 title="HTML5" className="hover:text-orange-500 transition" />
-          <SiCss3 title="CSS3" className="hover:text-blue-500 transition" />
-          <SiBootstrap title="Bootstrap" className="hover:text-purple-600 transition" />
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center text-5xl text-gray-400">
+          {[
+            { Icon: SiReact, color: "text-cyan-400", title: "React" },
+            { Icon: SiNextdotjs, color: "text-white", title: "Next.js" },
+            { Icon: SiTailwindcss, color: "text-sky-400", title: "Tailwind CSS" },
+            { Icon: SiPython, color: "text-yellow-300", title: "Python" },
+            { Icon: SiFlask, color: "text-gray-300", title: "Flask" },
+            { Icon: SiPostgresql, color: "text-blue-400", title: "PostgreSQL" },
+            { Icon: SiJavascript, color: "text-yellow-400", title: "JavaScript" },
+            { Icon: SiHtml5, color: "text-orange-500", title: "HTML5" },
+            { Icon: SiCss3, color: "text-blue-500", title: "CSS3" },
+            { Icon: SiBootstrap, color: "text-purple-600", title: "Bootstrap" },
+          ].map(({ Icon, color, title }, index) => (
+            <div
+              key={index}
+              className={`hover:${color} transform transition duration-300 hover:scale-110`}
+              title={title}
+            >
+              <Icon />
+            </div>
+          ))}
         </div>
       </div>
     </section>
