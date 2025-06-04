@@ -1,68 +1,84 @@
 "use client";
+
 import React from "react";
 import { ExternalLink } from "lucide-react";
+
+const projects = [
+  {
+    title: "Hama Nasi",
+    description:
+      "A full-stack movers application providing Company and User Dashboards for managing moving services efficiently.",
+    tech: ["Next.js", "Tailwind CSS", "Lucide-React", "PostgreSQL", "OAuth"],
+    features: [
+      "User Dashboard – Manage moving requests",
+      "Company Dashboard – Manage customer orders",
+      "Authentication System – Secure login",
+      "Responsive UI",
+      "PostgreSQL Database"
+    ],
+    url: "https://hama-nasi.vercel.app/"
+  },
+  {
+    title: "BookBus",
+    description:
+      "A modern bus booking platform allowing passengers to book seats and bus operators to manage buses, drivers, and transactions.",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+    features: [
+      "Book Bus Tickets",
+      "Seat Selection by Category",
+      "User Dashboard – Booking Management",
+      "Admin Panel – Manage Buses, Drivers, Reviews",
+      "Driver Dashboard – Route Management"
+    ],
+    url: "https://book-bus-eosin.vercel.app/"
+  }
+];
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-[#121212] text-white text-center"
+      className="min-h-screen flex flex-col justify-center items-center px-6 py-16 bg-[#121212] text-white"
     >
-      <h2 className="text-3xl md:text-5xl font-bold mb-10">
+      <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">
-          Featured Project
+          Projects
         </span>
       </h2>
 
-      {/* Project Card */}
-      <div className="bg-[#1f1f1f] rounded-2xl shadow-xl p-6 md:p-10 w-full max-w-5xl text-left mb-12 transition-all hover:scale-[1.02] hover:shadow-cyan-700/30">
-        <div className="mb-6">
-          <h3 className="text-2xl md:text-3xl font-semibold text-cyan-400 mb-2">
-            Hama Nasi
-          </h3>
-          <p className="text-gray-300 leading-relaxed">
-            A full-stack movers application built with modern tools like Next.js, Tailwind CSS, and PostgreSQL. Hama Nasi offers both a customer and company dashboard for efficiently managing moving services across Kenya.
-          </p>
-        </div>
-
-        {/* Tech Stack */}
-        <div className="mb-6">
-          <h4 className="text-lg font-semibold text-blue-500 mb-1">Tech Stack</h4>
-          <ul className="text-sm text-gray-400 list-disc list-inside grid grid-cols-2 md:grid-cols-3 gap-y-1">
-            <li>Next.js</li>
-            <li>Tailwind CSS</li>
-            <li>Lucide-React</li>
-            <li>PostgreSQL</li>
-            <li>OAuth Authentication</li>
-            <li>Next.js API Routes</li>
-          </ul>
-        </div>
-
-        {/* Features */}
-        <div className="mb-6">
-          <h4 className="text-lg font-semibold text-blue-500 mb-1">Key Features</h4>
-          <ul className="text-sm text-gray-400 list-disc list-inside space-y-1">
-            <li>User Dashboard – Manage personal moving requests</li>
-            <li>Company Dashboard – View and manage customer orders</li>
-            <li>Secure Authentication – OAuth integration</li>
-            <li>Responsive UI – Optimized for all screen sizes</li>
-            <li>Database-driven – Reliable data storage with PostgreSQL</li>
-          </ul>
-        </div>
-
-        {/* Link */}
-        <a
-          href="https://hama-nasi.vercel.app/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 text-blue-500 hover:underline text-sm font-medium"
-        >
-          Visit Live Project <ExternalLink size={18} />
-        </a>
+      <div className="grid gap-10 md:grid-cols-2 w-full max-w-6xl">
+        {projects.map((project, idx) => (
+          <div
+            key={idx}
+            className="bg-[#1f1f1f] rounded-xl shadow-lg p-6 md:p-8 transition hover:scale-[1.02] hover:shadow-blue-700/30"
+          >
+            <h3 className="text-2xl md:text-3xl font-semibold text-cyan-400 mb-2">
+              {project.title}
+            </h3>
+            <p className="text-gray-300 mb-4 leading-relaxed">
+              {project.description}
+            </p>
+            <ul className="text-sm text-gray-400 mb-4 list-disc pl-5 space-y-1">
+              {project.features.map((feature, i) => (
+                <li key={i}>{feature}</li>
+              ))}
+            </ul>
+            <p className="text-sm text-gray-400 mb-3">
+              <span className="font-medium text-white">Tech Stack:</span> {project.tech.join(", ")}
+            </p>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-blue-500 hover:underline"
+            >
+              Visit Project <ExternalLink size={18} />
+            </a>
+          </div>
+        ))}
       </div>
 
-      {/* Placeholder for more projects */}
-      <p className="text-gray-500 italic text-sm md:text-base">
+      <p className="text-gray-500 italic text-sm md:text-base mt-10 text-center">
         More projects coming soon. Stay tuned!
       </p>
     </section>
