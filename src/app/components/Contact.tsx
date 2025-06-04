@@ -36,7 +36,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-[#121212] text-white"
+      className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-[#1a1a1a] text-white"
     >
       <div className="w-full max-w-2xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-8">
@@ -46,7 +46,10 @@ export default function Contact() {
         </h2>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="space-y-5 bg-[#1f1f1f] p-8 rounded-xl shadow-md">
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-5 bg-[#1f1f1f] p-8 rounded-xl shadow-md"
+        >
           <input
             type="text"
             name="name"
@@ -82,33 +85,6 @@ export default function Contact() {
           </button>
           {status && <p className="text-center text-sm mt-2">{status}</p>}
         </form>
-
-        {/* Contact Info */}
-        <div className="mt-10 text-sm text-center space-y-2 text-gray-400">
-          <p>
-            Email:{" "}
-            <a href="mailto:briankesim@gmail.com" className="text-blue-500 hover:underline">
-              briankesim@gmail.com
-            </a>
-          </p>
-          <p>
-            Phone:{" "}
-            <a href="tel:+254795439412" className="text-blue-500 hover:underline">
-              0795 439 412
-            </a>
-          </p>
-          <p>
-            LinkedIn:{" "}
-            <a
-              href="https://linkedin.com/in/brian-kesi-a82868324"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-500 hover:underline"
-            >
-              Brian Kesi
-            </a>
-          </p>
-        </div>
       </div>
     </section>
   );
