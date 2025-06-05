@@ -17,7 +17,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-[#121212] text-white text-center"
+      className="min-h-screen flex flex-col justify-center items-center px-6 py-20 bg-black text-white text-center"
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">
         About Me
@@ -52,20 +52,20 @@ export default function About() {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 justify-items-center text-5xl text-gray-400">
           {[
-            { Icon: SiReact, color: "text-cyan-400", title: "React" },
-            { Icon: SiNextdotjs, color: "text-white", title: "Next.js" },
-            { Icon: SiTailwindcss, color: "text-sky-400", title: "Tailwind CSS" },
-            { Icon: SiPython, color: "text-yellow-300", title: "Python" },
-            { Icon: SiFlask, color: "text-gray-300", title: "Flask" },
-            { Icon: SiPostgresql, color: "text-blue-400", title: "PostgreSQL" },
-            { Icon: SiJavascript, color: "text-yellow-400", title: "JavaScript" },
-            { Icon: SiHtml5, color: "text-orange-500", title: "HTML5" },
-            { Icon: SiCss3, color: "text-blue-500", title: "CSS3" },
-            { Icon: SiBootstrap, color: "text-purple-600", title: "Bootstrap" },
-          ].map(({ Icon, color, title }, index) => (
+            { Icon: SiReact, hover: "hover:text-cyan-400", title: "React" },
+            { Icon: SiNextdotjs, hover: "hover:text-white", title: "Next.js" },
+            { Icon: SiTailwindcss, hover: "hover:text-sky-400", title: "Tailwind CSS" },
+            { Icon: SiPython, hover: "hover:text-yellow-300", title: "Python" },
+            { Icon: SiFlask, hover: "hover:text-gray-300", title: "Flask" },
+            { Icon: SiPostgresql, hover: "hover:text-blue-400", title: "PostgreSQL" },
+            { Icon: SiJavascript, hover: "hover:text-yellow-400", title: "JavaScript" },
+            { Icon: SiHtml5, hover: "hover:text-orange-500", title: "HTML5" },
+            { Icon: SiCss3, hover: "hover:text-blue-500", title: "CSS3" },
+            { Icon: SiBootstrap, hover: "hover:text-purple-600", title: "Bootstrap" },
+          ].map(({ Icon, hover, title }, index) => (
             <div
               key={index}
-              className={`hover:${color} transform transition duration-300 hover:scale-110`}
+              className={`text-gray-400 ${hover} transform transition duration-300 hover:scale-110`}
               title={title}
             >
               <Icon />

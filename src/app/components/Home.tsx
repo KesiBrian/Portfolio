@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <section
       id="home"
-      className="min-h-screen flex flex-col justify-center items-center px-4 text-center bg-gradient-to-b from-[#0f0f0f] to-[#1a1a1a] text-white"
+      className="min-h-screen flex flex-col justify-center items-center px-4 text-center bg-black text-white"
     >
       <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">

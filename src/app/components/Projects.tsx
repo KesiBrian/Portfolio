@@ -38,7 +38,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center items-center px-6 py-16 bg-[#121212] text-white"
+      className="min-h-screen flex flex-col justify-center items-center px-6 py-16 bg-black text-white"
     >
       <h2 className="text-3xl md:text-5xl font-bold mb-12 text-center">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600">

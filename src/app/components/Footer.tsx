@@ -8,7 +8,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-[#1a1a1a] text-gray-300 px-6 py-10 mt-20 text-center relative">
+    <footer className="bg-black text-gray-300 px-6 py-10 mt-20 text-center relative">
       <div className="max-w-4xl mx-auto space-y-6">
 
         {/* Contact Info */}
