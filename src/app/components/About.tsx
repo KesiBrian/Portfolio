@@ -24,13 +24,13 @@ export default function About() {
       </h2>
 
       <p className="max-w-3xl text-gray-300 mb-10 leading-relaxed text-base md:text-lg">
-        I'm <span className="font-semibold text-white">Brian Kesi</span>, a passionate full-stack developer based in Nairobi, Kenya.
+        I am <span className="font-semibold text-white">Brian Kesi</span>, a passionate full-stack developer based in Nairobi, Kenya.
         I specialize in building dynamic, responsive web applications that deliver smooth user experiences — using powerful tools like{" "}
         <span className="text-white font-semibold">React, Next.js, Tailwind CSS, Python</span>, and{" "}
         <span className="text-white font-semibold">Flask</span>. I enjoy transforming ideas into real-world products that solve problems
         and create impact.
         <br /><br />
-        When I'm not coding, I'm likely exploring new tech, fine-tuning UI details, or helping others break into development.
+        When I am not coding, I am likely exploring new tech, fine-tuning UI details, or helping others break into development.
       </p>
 
       <div className="bg-[#1f1f1f] rounded-xl shadow-lg p-6 md:p-8 w-full max-w-3xl">
