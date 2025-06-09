@@ -28,9 +28,10 @@ export default function Contact() {
       } else {
         setStatus("Something went wrong. Please try again.");
       }
-    } catch (err) {
-      setStatus("Error sending message.");
-    }
+    } catch {
+  setStatus("Error sending message.");
+}
+
   };
 
   return (
