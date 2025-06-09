@@ -9,7 +9,7 @@ export default function Home() {
     >
       <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-4">
         <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600">
-          Hi, I am Brian
+          Hi, I'm Brian
         </span>
       </h1>
 
